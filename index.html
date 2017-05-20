@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!--<script src="script.js"></script>-->
+</head>
+<body>
+  Личная скидка: <input id="discount" type="text" value="0.03"><br>
+  Текущий баланс: <input id="balance" type="text" placeholder="Текущий баланс"><br>
+  Цена тарифа: <input id="price_per_month" type="text" placeholder="Цена тарифа"><br>
+  Кол-во слотов: <input id="slots" type="text" value="1" onchange=f()><br>
+  Сумма в месяц: <input id="sum_per_month" type="text" placeholder="Сумма в месяц">
+  Сумма со скидкой: <input id="sum_per_month_with_discount" type="text" placeholder="Сумма в месяц c дисконтом"><br>
+  Сумма за день аренды: <input id="price_per_day" type="text" placeholder="Сумма за день аренды"><br>
+  Кол-во дней: <input id="amount_of_days" type="text" value="1" onchange=f()><br>
+  Сумма с указанным кол-вом дней: <input id="sum_per_number_of_days" type="text" placeholder="Сумма по дням">
+  Со скидкой <input id="sum_per_days_with_discount" type="text" placeholder="Сумма по дням"><br>
+
+  <input type="submit" onclick="f();">
+
+  <script>
+    function f(){
+      let discount = document.getElementById('discount').value;
+      let price_per_month = document.getElementById('price_per_month').value;
+      let slots = document.getElementById('slots').value;
+      let sum_per_month = Number(price_per_month) * Number(slots);
+      let amount_of_days = document.getElementById('amount_of_days').value;
+      document.getElementById('sum_per_month').value = Number(price_per_month) * Number(slots);
+      document.getElementById('price_per_day').value = Number(sum_per_month) / 30;
+      let discount_per_month = Number(sum_per_month) * Number(discount);
+      let price_per_day = document.getElementById('price_per_day').value;
+      document.getElementById('sum_per_month_with_discount').value = Number(sum_per_month) - Number(discount_per_month);
+      document.getElementById('sum_per_number_of_days').value = Number(price_per_day) * Number(amount_of_days);
+      let sum_per_number_of_days = document.getElementById('sum_per_number_of_days').value;
+      let discount_per_day = Number(price_per_day) * Number(discount);
+      let sum_per_days_with_discount = document.getElementById('sum_per_days_with_discount').value = Number(sum_per_number_of_days) - Number(discount_per_day);
+      let balance = document.getElementById('balance').value;
+
+        do {
+          document.getElementById('amount_of_days').value = Number(amount_of_days) + 1;
+          console.log("Цикл выполняется");
+          console.log(price_per_day);
+        } while (balance < sum_per_days_with_discount);
+
+//      if (balance > sum_per_days_with_discount) {
+//        amount_of_days = document.getElementById('amount_of_days').value = Number(amount_of_days) + 1;
+//        console.log(amount_of_days);
+//      }
+//    }
+
+
+//    let amount_of_days = document.getElementById('amount_of_days').value;
+//    let balance = document.getElementById('balance').value;
+//    do {
+//      amount_of_days++;
+//      // тело цикла
+//    } while (условие);
+
+//    function g(){
+//      let amount_of_days = document.getElementById('amount_of_days').value;
+//      console.log(amount_of_days);
+//      for (amount_of_days = 1; balance > sum_per_days_with_discount; amount_of_days++) {
+//        console.log(amount_of_days);
+//        //document.getElementById('amount_of_days').value = Number(amount_of_days) + 1;
+//      }
+    }
+  </script>
+</body>
+</html>
