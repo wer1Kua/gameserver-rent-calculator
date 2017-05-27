@@ -22,7 +22,7 @@
     <option value="0.25">25%</option>
     <option value="0.30">30%</option>
   </select><br>
-  Текущий баланс: <input id="balance" type="text" value="0"><br>
+  Текущий баланс: <input id="balance" type="text" value="0" required><br>
   Цена тарифа:
   <select id="price_per_month">
     <option value="5">5 грн</option>
@@ -35,13 +35,13 @@
     <option value="90">90 грн</option>
     <option value="125">125 грн</option>
     <option value="200">200 грн</option>
-  </select>
+  </select><br>
   Кол-во слотов: <input id="slots" type="text" value="10"><br>
-  Сумма в месяц: <input id="sum_per_month" type="text">
+  Сумма в месяц: <input id="sum_per_month" type="text"><br>
   Сумма со скидкой: <input id="sum_per_month_with_discount" type="text"><br>
   Сумма за день аренды: <input id="price_per_day" type="text"><br>
   Кол-во дней: <input id="amount_of_days" type="text" value="1"><br>
-  Сумма с указанным кол-вом дней: <input id="sum_per_number_of_days" type="text" placeholder="Сумма по дням">
+  Сумма с указанным кол-вом дней: <input id="sum_per_number_of_days" type="text" placeholder="Сумма по дням"><br>
   Со скидкой <input id="sum_per_days_with_discount" type="text" placeholder="Сумма по дням"><br>
 
   <input type="submit" value="Рассчитать" onclick="f();">

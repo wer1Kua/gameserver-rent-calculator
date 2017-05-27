@@ -1,18 +1,15 @@
 body {
     font-size: 18px;
     font-family: sans-serif;
-    color: #fff;
-    background-color: #24292e;
-    background-image: url(images/star-bg.svg), linear-gradient(#191c20, #24292e 15%);
-    background-repeat: repeat-x;
-    background-position: center 0, 0 0, 0 0;
+    color: #000;
+    background: #FFF;
     line-height: 2.0;
 }
 
 .wrapper {
     margin: 200px auto;
     width: 920px;
-    background: #1D1930;
+    background: #e5edf6;
     border-radius: 10px;
     padding: 17px;
 }
@@ -51,5 +48,5 @@ select {
 }
 
 input {
-    width: 60px;
+    width: auto;
 }
