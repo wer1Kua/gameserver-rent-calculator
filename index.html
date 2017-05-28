@@ -8,8 +8,11 @@
 <body>
 <div class="wrapper">
   <ul class="list">
+    <li>
+      Текущий баланс клиента: <input class="inputs" id="balance" type="text" value="50">
+    </li>
     <li><span class="form-left">Личная скидка клиента:</span>
-      <select class="form" id="discount">
+      <select class="inputs" id="discount">
         <option value="0.03">3%</option>
         <option value="0.04">4%</option>
         <option value="0.05">5%</option>
@@ -24,11 +27,8 @@
         <option value="0.30">30%</option>
       </select>
     </li>
-    <li>
-      Текущий баланс клиента: <input class="form" id="balance" type="text" value="0" required>
-    </li>
     <li>Цена тарифа:
-      <select class="form" id="price_per_month">
+      <select class="inputs" id="price_per_month">
         <option value="5">5 грн</option>
         <option value="6">6 грн</option>
         <option value="7">7 грн</option>
@@ -41,57 +41,38 @@
         <option value="200">200 грн</option>
       </select></li>
     <li>
-      Количество слотов: <input class="form" id="slots" type="text" value="10">
+      Количество слотов: <input class="inputs" id="slots" type="text" value="10">
     </li>
     <li>
-      Сумма в месяц: <input class="form" id="sum_per_month" type="text"><br>
+      Сумма в месяц: <input class="inputs" id="sum_per_month" type="text" disabled><br>
     </li>
     <li>
-      Сумма в месяц с учетом скидки: <input class="form" id="sum_per_month_with_discount" type="text"><br>
+      Сумма в месяц с учетом скидки: <input class="inputs" id="sum_per_month_with_discount" type="text" disabled><br>
     </li>
     <li>
-      Сумма за день аренды: <input class="form" id="price_per_day" type="text"><br>
+      Сумма за день аренды: <input class="inputs" id="price_per_day" type="text" disabled><br>
     </li>
     <li>
-      Количество дней аренды: <input class="form" id="amount_of_days" type="text" value="1"><br>
+      Количество дней аренды: <input class="inputs" id="amount_of_days" type="text" value="1" disabled><br>
     </li>
     <li>
-      Сумма с указанным количеством дней: <input class="form" id="sum_per_number_of_days" type="text" placeholder="Сумма по дням"><br>
+      Сумма с указанным количеством дней: <input class="inputs" id="sum_per_number_of_days" type="text" disabled><br>
     </li>
     <li>
-      С указанным кол-вом дней с учетом скидки: <input class="form" id="sum_per_days_with_discount" type="text" placeholder="Сумма по дням"><br>
+      С указанным кол-вом дней с учетом скидки: <input class="inputs" id="sum_per_days_with_discount" type="text" disabled><br>
     </li>
   </ul>
 
-  <input type="submit" value="Рассчитать" onclick="f();">
-  <!-- 1. Define some markup -->
-  <button class="btn">Copy</button>
-  <div class="result">
-    <div id="result" class="result"></div>
-    <span id="result-days"></span>
+  <input type="submit" class="btn" value="Рассчитать" onclick="f();">
+
+  <div class="summary">
+    <span id="result"></span>
     <span id="result-money"></span>
+    <span id="copy-to-clipboard"></span>
   </div>
 
 </div>
   <script src="script.js"></script>
-  <!-- 2. Include library -->
   <script src="clipboard.js"></script>
-
-  <!-- 3. Instantiate clipboard -->
-  <script>
-    var clipboard = new Clipboard('.btn', {
-      target: function() {
-        return document.getElementById('result-money');
-      }
-    });
-
-    clipboard.on('success', function(e) {
-      console.log(e);
-    });
-
-    clipboard.on('error', function(e) {
-      console.log(e);
-    });
-  </script>
 </body>
 </html>

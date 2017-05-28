@@ -18,9 +18,18 @@ function f(){
   if (balance > sum_per_days_with_discount) {
     document.getElementById('amount_of_days').value = Number(amount_of_days) + 1;
     console.log(amount_of_days + " " + sum_per_days_with_discount);
-    document.getElementById('result').innerHTML = "Количество дней: " + amount_of_days + "Сумма денег с учетом скидки: "+ sum_per_days_with_discount;
-    document.getElementById('result-days').innerHTML = amount_of_days;
+    document.getElementById('result').innerHTML = "Количество дней: " + amount_of_days + " Сумма денег с учетом скидки: ";
     document.getElementById('result-money').innerHTML = sum_per_days_with_discount;
+    // document.getElementById('copy-to-clipboard').innerHTML = '<button class="btn"><img class="copy-img" width="14" src="images/copy.svg" alt="Copy to clipboard"></button>';
     f();
   }
+
+
+  let clipboard = new Clipboard('.btn', {
+    target: function() {
+      return document.getElementById('result-money');
+    }
+  });
 }
+
+// todo: убрать лишние инпуты

@@ -45,7 +45,7 @@ select {
     padding: 17px;
 }
 
-.form {
+.inputs {
     display: inline;
     float: right;
 }
@@ -60,6 +60,6 @@ input[type=submit] {
     cursor: pointer;
 }
 
-.result {
-    background: red;
+input[type="text"]:disabled {
+    background: #FFF;
 }
