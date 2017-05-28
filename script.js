@@ -18,7 +18,9 @@ function f(){
   if (balance > sum_per_days_with_discount) {
     document.getElementById('amount_of_days').value = Number(amount_of_days) + 1;
     console.log(amount_of_days + " " + sum_per_days_with_discount);
-    document.getElementById('result').innerHTML = "Количество дней: " + amount_of_days + " " + "Сумма денег с учетом скидки: " + sum_per_days_with_discount;
+    document.getElementById('result').innerHTML = "Количество дней: " + amount_of_days + "Сумма денег с учетом скидки: "+ sum_per_days_with_discount;
+    document.getElementById('result-days').innerHTML = amount_of_days;
+    document.getElementById('result-money').innerHTML = sum_per_days_with_discount;
     f();
   }
 }
