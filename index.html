@@ -6,11 +6,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrapper">
+<div class="wrapper clearfix">
   <ul class="list">
     <li>
-      Текущий баланс клиента: <input class="inputs" id="balance" type="text" value="50">
+      Текущий баланс клиента: <input class="inputs" id="balance" type="text" placeholder="Заполните поле">
     </li>
+    <div class="error-message" id="message"></div>
     <li><span class="form-left">Личная скидка клиента:</span>
       <select class="inputs" id="discount">
         <option value="0.03">3%</option>
@@ -43,28 +44,28 @@
     <li>
       Количество слотов: <input class="inputs" id="slots" type="text" value="10">
     </li>
-    <li>
+    <li class="hidden">
       Сумма в месяц: <input class="inputs" id="sum_per_month" type="text" disabled><br>
     </li>
-    <li>
+    <li class="hidden">
       Сумма в месяц с учетом скидки: <input class="inputs" id="sum_per_month_with_discount" type="text" disabled><br>
     </li>
-    <li>
+    <li class="hidden">
       Сумма за день аренды: <input class="inputs" id="price_per_day" type="text" disabled><br>
     </li>
-    <li>
+    <li class="hidden">
       Количество дней аренды: <input class="inputs" id="amount_of_days" type="text" value="1" disabled><br>
     </li>
-    <li>
+    <li class="hidden">
       Сумма с указанным количеством дней: <input class="inputs" id="sum_per_number_of_days" type="text" disabled><br>
     </li>
-    <li>
+    <li class="hidden">
       С указанным кол-вом дней с учетом скидки: <input class="inputs" id="sum_per_days_with_discount" type="text" disabled><br>
     </li>
   </ul>
 
-  <input type="submit" class="btn" value="Рассчитать" onclick="f();">
-
+  <button class="btn btn-green" onclick="f();">Рассчитать</button>
+  <button class="btn btn-red" onclick="location.reload();"><img src="images/spinner11.svg" width="12px" alt="Refresh"></button>
   <div class="summary">
     <span id="result"></span>
     <span id="result-money"></span>
