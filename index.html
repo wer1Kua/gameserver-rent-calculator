@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Калькулятор дней аренды сервера</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="wrapper clearfix">
+<div class="wrapper">
   <ul class="list">
     <li>
       Текущий баланс клиента: <input class="inputs" id="balance" type="text" placeholder="Заполните поле">
@@ -65,15 +65,19 @@
   </ul>
 
   <button class="btn btn-green" onclick="f();">Рассчитать</button>
-  <button class="btn btn-red" onclick="location.reload();"><img src="images/spinner11.svg" width="12px" alt="Refresh"></button>
+  <button class="btn btn-red" onclick="location.reload();"><img src="img/reload.svg" width="12px" alt="Refresh"></button>
+
   <div class="summary">
     <span id="result"></span>
     <span id="result-money"></span>
     <span id="copy-to-clipboard"></span>
   </div>
 
+  <div id="copied" class="copied">
+  </div>
+
 </div>
-  <script src="script.js"></script>
-  <script src="clipboard.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/clipboard.js"></script>
 </body>
 </html>

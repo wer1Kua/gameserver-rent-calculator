@@ -1,3 +1,7 @@
+*:focus {
+    outline: none;
+}
+
 body {
     font-size: 18px;
     font-family: sans-serif;
@@ -25,6 +29,12 @@ select {
     font-size: 16px;
     border-radius: 5px;
     border: none;
+    transition: all 0.5s ease;
+}
+
+input:hover,
+select:hover {
+    box-shadow: 0 0 8px #0fbdff;
 }
 
 input {
@@ -41,9 +51,13 @@ select {
     padding: 2px 0;
 }
 
+.clearfix {
+    overflow: auto;
+}
+
 .wrapper {
     margin: 200px auto;
-    width: 620px;
+    width: 539px;
     background: #e5edf6;
     border-radius: 10px;
     padding: 17px;
@@ -66,10 +80,20 @@ select {
 
 .btn-green {
     background-color: #4CAF50;
+    transition: all 0.5s ease;
+}
+
+.btn-green:hover {
+    box-shadow: 0 0 10px 0 #4caf50;
 }
 
 .btn-red {
     background-color: #ff8484;
+    transition: all 0.5s ease;
+}
+
+.btn-red:hover {
+    box-shadow: 0 0 10px 0 #ff8484;
 }
 
 .hidden {
@@ -84,9 +108,18 @@ select {
 }
 
 .summary {
-    display: inline-block;
+    float: right;
+    display: block;
     border-radius: 5px;
-    color: #000000;
-    background-color: #c5f1d0;
-    width: 323px;
+    margin-top: 6px;
+}
+
+.copied {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #01ab00;
+    font-weight: bold;
+    background: #d4ffdc;
+    text-align: center;
+    border-radius: 5px;
 }

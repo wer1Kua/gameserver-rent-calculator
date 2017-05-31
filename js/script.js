@@ -18,11 +18,12 @@ function f(){
   message.innerHTML = "";
 
   try {
-    if(balance == "")  throw "не заполнен";
-    if(isNaN(balance)) throw "должен быть числовым значением";
+    if(balance == "") throw "не заполнен.";
+    if(isNaN(balance)) throw "должен иметь числовое значение.";
     balance = Number(balance);
-    if(balance < 0)    throw "не может быть меньше нуля";
-    if(balance > 1000)   throw "слишком большой баланс";
+    if(balance === 0) throw "не может быть нулевым";
+    if(balance < 0) throw "не может быть меньше нуля";
+    if(balance > 1000) throw "слишком большой баланс";
   }
   catch(err) {
     message.innerHTML = "Баланс " + err;
@@ -30,9 +31,9 @@ function f(){
 
   if (balance > sum_per_days_with_discount) {
     document.getElementById('amount_of_days').value = Number(amount_of_days) + 1;
-    console.log(amount_of_days + " " + sum_per_days_with_discount);
     document.getElementById('result').innerHTML = "Количество дней: " + amount_of_days +"<br>" + "Сумма денег с учетом скидки: ";
     document.getElementById('result-money').innerHTML = sum_per_days_with_discount;
+    document.getElementById('copied').innerHTML = "Cкопировано в буфер обмена :)";
     f();
   }
 
