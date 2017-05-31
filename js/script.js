@@ -31,15 +31,15 @@ function f(){
 
   if (balance > sum_per_days_with_discount) {
     document.getElementById('amount_of_days').value = Number(amount_of_days) + 1;
-    document.getElementById('result').innerHTML = "Количество дней: " + amount_of_days +"<br>" + "Сумма денег с учетом скидки: ";
-    document.getElementById('result-money').innerHTML = sum_per_days_with_discount;
-    document.getElementById('copied').innerHTML = "Cкопировано в буфер обмена :)";
+    document.getElementById('result').innerHTML = "Продлить на " + amount_of_days +" дней <br>" + "Будет потрачено: " + sum_per_days_with_discount;
+    document.getElementById('money-left').innerHTML = (Number(balance) - sum_per_days_with_discount).toFixed(2);
+    document.getElementById('copied').innerHTML = "Остаток баланса скопирован в буфер :)";
     f();
   }
 
   let clipboard = new Clipboard('.btn', {
     target: function() {
-      return document.getElementById('result-money');
+      return document.getElementById('money-left');
     }
   });
 }
