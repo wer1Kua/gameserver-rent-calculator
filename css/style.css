@@ -29,7 +29,7 @@ select {
     font-size: 16px;
     border-radius: 5px;
     border: none;
-    transition: all 0.5s ease;
+    transition: box-shadow 0.5s ease;
 }
 
 input:hover,
@@ -80,7 +80,7 @@ select {
 
 .btn-green {
     background-color: #4CAF50;
-    transition: all 0.5s ease;
+    transition: box-shadow 0.5s ease;
 }
 
 .btn-green:hover {
@@ -89,7 +89,7 @@ select {
 
 .btn-red {
     background-color: #ff8484;
-    transition: all 0.5s ease;
+    transition: box-shadow 0.5s ease;
 }
 
 .btn-red:hover {
