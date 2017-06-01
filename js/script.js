@@ -21,9 +21,9 @@ function f(){
     if(balance == "") throw "не заполнен.";
     if(isNaN(balance)) throw "должен иметь числовое значение.";
     balance = Number(balance);
-    if(balance === 0) throw "не может быть нулевым";
-    if(balance < 0) throw "не может быть меньше нуля";
-    if(balance > 1000) throw "слишком большой баланс";
+    if(balance === 0) throw "не может быть нулевым.";
+    if(balance < 0) throw "не может быть меньше нуля.";
+    if(balance > 1000) throw "слишком большой баланс.";
   }
   catch(err) {
     message.innerHTML = "Баланс " + err;
