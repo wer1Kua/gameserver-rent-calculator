@@ -8,11 +8,10 @@ function f(){
   document.getElementById('price_per_day').value = Number(sum_per_month) / 30;
   let discount_per_month = Number(sum_per_month) * Number(discount);
   let price_per_day = document.getElementById('price_per_day').value;
-  document.getElementById('sum_per_month_with_discount').value = Number(sum_per_month) - Number(discount_per_month);
+  let sum_per_month_with_discount = document.getElementById('sum_per_month_with_discount').value = Number(sum_per_month) - Number(discount_per_month);
   document.getElementById('sum_per_number_of_days').value = Number(price_per_day) * Number(amount_of_days);
   let sum_per_number_of_days = document.getElementById('sum_per_number_of_days').value;
-  let discount_per_day = Number(price_per_day) * Number(discount);
-  let sum_per_days_with_discount = document.getElementById('sum_per_days_with_discount').value = Number(sum_per_number_of_days) - Number(discount_per_day);
+  let sum_per_days_with_discount = document.getElementById('sum_per_days_with_discount').value = Number(amount_of_days) * Number(sum_per_month_with_discount) / 30;
   let balance = document.getElementById('balance').value;
   let message = document.getElementById('message');
   message.innerHTML = "";
