@@ -63,8 +63,7 @@ select {
     padding: 17px;
 }
 
-.inputs {
-    display: inline;
+.position-right {
     float: right;
 }
 
@@ -108,7 +107,6 @@ select {
 }
 
 .summary {
-    float: right;
     display: block;
     border-radius: 5px;
     margin-top: 6px;

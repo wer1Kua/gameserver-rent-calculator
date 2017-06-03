@@ -12,11 +12,11 @@
 <div class="wrapper">
   <ul class="list">
     <li>
-      Текущий баланс клиента: <input class="inputs" id="balance" type="text" placeholder="Заполните поле">
+      Текущий баланс клиента: <input class="position-right" id="balance" type="text" placeholder="Заполните поле">
     </li>
     <div class="error-message" id="message"></div>
     <li><span class="form-left">Личная скидка клиента:</span>
-      <select class="inputs" id="discount">
+      <select class="position-right" id="discount">
         <option value="0.03">3%</option>
         <option value="0.04">4%</option>
         <option value="0.05">5%</option>
@@ -32,7 +32,7 @@
       </select>
     </li>
     <li>Цена тарифа:
-      <select class="inputs" id="price_per_month">
+      <select class="position-right" id="price_per_month">
         <option value="5">5 грн</option>
         <option value="6">6 грн</option>
         <option value="7">7 грн</option>
@@ -45,32 +45,17 @@
         <option value="200">200 грн</option>
       </select></li>
     <li>
-      Количество слотов: <input class="inputs" id="slots" type="text" value="10">
+      Количество слотов: <input class="position-right" id="slots" type="text" value="10">
     </li>
     <li class="hidden">
-      Сумма в месяц: <input class="inputs" id="sum_per_month" type="text" disabled><br>
-    </li>
-    <li class="hidden">
-      Сумма в месяц с учетом скидки: <input class="inputs" id="sum_per_month_with_discount" type="text" disabled><br>
-    </li>
-    <li class="hidden">
-      Сумма за день аренды: <input class="inputs" id="price_per_day" type="text" disabled><br>
-    </li>
-    <li class="hidden">
-      Количество дней аренды: <input class="inputs" id="amount_of_days" type="text" value="1" disabled><br>
-    </li>
-    <li class="hidden">
-      Сумма с указанным количеством дней: <input class="inputs" id="sum_per_number_of_days" type="text" disabled><br>
-    </li>
-    <li class="hidden">
-      С указанным кол-вом дней с учетом скидки: <input class="inputs" id="sum_per_days_with_discount" type="text" disabled><br>
+      Количество дней аренды: <input class="position-right" id="amount_of_days" type="text" value="1" disabled><br>
     </li>
   </ul>
 
   <button class="btn btn-green" onclick="f();">Рассчитать</button>
   <button class="btn btn-red" onclick="location.reload();"><img src="img/reload.svg" width="12px" alt="Refresh"></button>
 
-  <div class="summary">
+  <div class="summary position-right">
     <span id="result"></span>
     <span id="money-left" style="opacity: 0"></span>
   </div>

@@ -1,19 +1,15 @@
 function f(){
-  let discount = document.getElementById('discount').value;
-  let price_per_month = document.getElementById('price_per_month').value;
-  let slots = document.getElementById('slots').value;
-  let sum_per_month = Number(price_per_month) * Number(slots);
-  let amount_of_days = document.getElementById('amount_of_days').value;
-  document.getElementById('sum_per_month').value = Number(price_per_month) * Number(slots);
-  document.getElementById('price_per_day').value = Number(sum_per_month) / 30;
-  let discount_per_month = Number(sum_per_month) * Number(discount);
-  let price_per_day = document.getElementById('price_per_day').value;
-  let sum_per_month_with_discount = document.getElementById('sum_per_month_with_discount').value = Number(sum_per_month) - Number(discount_per_month);
-  document.getElementById('sum_per_number_of_days').value = Number(price_per_day) * Number(amount_of_days);
-  let sum_per_number_of_days = document.getElementById('sum_per_number_of_days').value;
-  let sum_per_days_with_discount = document.getElementById('sum_per_days_with_discount').value = Number(amount_of_days) * Number(sum_per_month_with_discount) / 30;
-  let balance = document.getElementById('balance').value;
-  let message = document.getElementById('message');
+  let balance = document.getElementById('balance').value,
+  discount = document.getElementById('discount').value,
+  price_per_month = document.getElementById('price_per_month').value,
+  slots = document.getElementById('slots').value,
+  sum_per_month = Number(price_per_month) * Number(slots),
+  amount_of_days = document.getElementById('amount_of_days').value,
+  discount_per_month = Number(sum_per_month) * Number(discount),
+  sum_per_month_with_discount = Number(sum_per_month) - Number(discount_per_month),
+  sum_per_days_with_discount = Number(amount_of_days) * Number(sum_per_month_with_discount) / 30,
+  message = document.getElementById('message');
+
   message.innerHTML = "";
 
   try {
