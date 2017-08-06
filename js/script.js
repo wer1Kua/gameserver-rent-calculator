@@ -24,7 +24,7 @@ function f(){
     message.innerHTML = "Баланс " + err;
   }
 
-  if (balance > sum_per_days_with_discount) {
+  if (balance >= sum_per_days_with_discount) {
     document.getElementById('amount_of_days').value = Number(amount_of_days) + 1;
     document.getElementById('result').innerHTML = "Продлить на " + amount_of_days +" дней <br>" + "Будет потрачено: " + sum_per_days_with_discount;
     document.getElementById('money-left').innerHTML = (Number(balance) - sum_per_days_with_discount).toFixed(2);
